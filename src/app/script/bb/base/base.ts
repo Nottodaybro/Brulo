@@ -182,7 +182,6 @@ export function shareCanvas(p: {
     const err = (): void => alert('sharing not supported');
     p.canvas.toBlob(function (blob) {
         if (!blob) {
-            err();
             p.callback();
             return;
         }
@@ -195,10 +194,8 @@ export function shareCanvas(p: {
                 } as any)
                 .then(() => {})
                 .catch(() => {
-                    err();
                 });
         } catch (e) {
-            err();
         }
         p.callback();
     }, mimetype);
