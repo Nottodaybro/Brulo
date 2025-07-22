@@ -1,4 +1,4 @@
-import { english, languages, loadLanguage, TTranslationCode } from '../../language/language';
+import { english, languages, loadLanguage, TTranslationCode } from '../../languages/generate';
 import { LocalStorage } from '../bb/base/local-storage';
 
 export const LS_LANGUAGE_KEY = 'klecks-language';
